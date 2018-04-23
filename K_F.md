@@ -100,7 +100,7 @@ public int predictValueKalman(int p, int q, int period)
     }
     Q = Math.sqrt(Q);
 
-    // 求解协方差矩阵 sigma
+    // Matrix sigma
     double [] noise = new double[data.length];
     for (int i = 0; i < noise.length; ++i)
     {
@@ -136,8 +136,8 @@ public int predictValueKalman(int p, int q, int period)
     double [][] sigma = new ARMAMaths().computeMutalCorrMatrix(sigmaTrans);
     Matrix sigmaMatrix = new Matrix(sigma).transpose();
 
-    // Kalman 迭代
-    double [] v = new double[data.length];
+    // Kalman iterator
+    double [] v = new double[data.length];
     double [][] xhat = new double[m][data.length];
     double [] tmphat = new double[m];
     double V = 0.0;
