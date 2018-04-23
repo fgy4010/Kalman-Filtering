@@ -41,6 +41,7 @@ Java to implement Kalman Filtering
           }
       }
       Matrix TMarix = new Matrix(T);      //matrix    
+      
       // calculate R
       double [] R = new double[m];       
       double [] theta = new double[m - 1];
@@ -77,10 +78,12 @@ Java to implement Kalman Filtering
           }
       }
       Matrix RMatrix = new Matrix(R, 1).transpose();
-      // Z
+     
+     // Z
       double [] Z = new double[m];        
       Z[0] = 1;
       Matrix ZMatrix = new Matrix(Z, 1);
+      
       // Q
       double Q = 0.0;
       if (p == 0)     //MA
@@ -97,6 +100,7 @@ Java to implement Kalman Filtering
           Q = this.arimaCoe.get(1)[0];
       }
       Q = Math.sqrt(Q);
+      
       // Matrix sigma
       double [] noise = new double[data.length];
       for (int i = 0; i < noise.length; ++i)
@@ -132,6 +136,7 @@ Java to implement Kalman Filtering
       }
       double [][] sigma = new ARMAMaths().computeMutalCorrMatrix(sigmaTrans);
       Matrix sigmaMatrix = new Matrix(sigma).transpose();
+      
       // Kalman iterator
       double [] v = new double[data.length];
       double [][] xhat = new double[m][data.length];
