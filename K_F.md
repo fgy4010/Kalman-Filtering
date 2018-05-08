@@ -101,7 +101,7 @@ Java to implement Kalman Filtering
       }
       Q = Math.sqrt(Q);
       
-      // Matrix sigma
+      //calculate Matrix sigma
       double [] noise = new double[data.length];
       for (int i = 0; i < noise.length; ++i)
       {
