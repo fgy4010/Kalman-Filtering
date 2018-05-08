@@ -138,6 +138,7 @@ Java to implement Kalman Filtering
       Matrix sigmaMatrix = new Matrix(sigma).transpose();
       
       // Kalman iterator
+      // end loop
       double [] v = new double[data.length];
       double [][] xhat = new double[m][data.length];
       double [] tmphat = new double[m];
