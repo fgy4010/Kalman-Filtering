@@ -6,7 +6,7 @@ Java to implement Kalman Filtering
       double [] data = this.preDealDiff(period);
       int m = Math.max(p, q + 1);
       // calculate T
-      double [][] T = new double[m][m];       //default initialization
+      double [][] T = new double[m][m];       //default initialization.
       if (p == 0)
       {
           for (int i = 0; i < m; ++i)
