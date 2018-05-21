@@ -40,7 +40,7 @@ Java to implement Kalman Filtering
               T[i][0] = 0;
           }
       }
-      Matrix TMarix = new Matrix(T);      //matrix    
+      Matrix TMarix = new Matrix(T);      //calcilate matrix    
       
       // calculate R
       double [] R = new double[m];       
