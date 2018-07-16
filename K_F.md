@@ -78,12 +78,11 @@ Java to implement Kalman Filtering
           }
       }
       Matrix RMatrix = new Matrix(R, 1).transpose();
-     
-     //calculate Z
+      //calculate Z
       double [] Z = new double[m];        
       Z[0] = 1;
       Matrix ZMatrix = new Matrix(Z, 1);
-      
+
       //calculate Q
       double Q = 0.0;
       if (p == 0)     //MA
