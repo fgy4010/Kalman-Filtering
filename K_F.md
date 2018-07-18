@@ -134,6 +134,7 @@ Java to implement Kalman Filtering
       double [][] sigma = new ARMAMaths().computeMutalCorrMatrix(sigmaTrans);
       Matrix sigmaMatrix = new Matrix(sigma).transpose();
       
+      
       // Kalman iterator
       // end loop
       double [] v = new double[data.length];
