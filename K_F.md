@@ -1,5 +1,5 @@
 # Kalman-Filtering
-Java to implement Kalman Filtering.
+Java to implement Kalman Filtering
 
     public int predictValueKalman(int p, int q, int period)
     {
