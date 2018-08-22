@@ -3,7 +3,7 @@ Java to implement Kalman Filtering.
 
     public int predictValueKalman(int p, int q, int period)
     {
-      double[] data = this.preDealDiff(period);
+      double [] data = this.preDealDiff(period);
       int m = Math.max(p, q + 1);
       // calculate T
       double [][] T = new double[m][m];       //default initialization.
